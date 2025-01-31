@@ -52,20 +52,20 @@ def get_waiting_time(database):
     return results
 
 
-conn = sqlite3.connect('ecommerce.sqlite')
-database = conn.cursor()
+# conn = sqlite3.connect('ecommerce.sqlite')
+# database = conn.cursor()
 
-# Test query_orders
-print("All Orders Sorted by OrderID:")
-print(query_orders(database))
+# # Test query_orders
+# print("All Orders Sorted by OrderID:")
+# print(query_orders(database))
 
-# Test get_orders_range
-print("\nOrders between '2022-01-01' and '2022-03-01':")
-print(get_orders_range(database, '2022-01-01', '2022-03-01'))
+# # Test get_orders_range
+# print("\nOrders between '2022-01-01' and '2022-03-01':")
+# print(get_orders_range(database, '2022-01-01', '2022-03-01'))
 
-# Test get_waiting_time
-print("\nOrders sorted by delivery waiting time:")
-print(get_waiting_time(database))
+# # Test get_waiting_time
+# print("\nOrders sorted by delivery waiting time:")
+# print(get_waiting_time(database))
 
-# Close connection
-conn.close()
+# # Close connection
+# conn.close()
