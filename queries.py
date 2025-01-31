@@ -42,7 +42,8 @@ def get_waiting_time(database):
     # - Sort results by waiting time (smallest to largest)
 
     query = """
-    SELECT OrderID, OrderDate, ShippedDate,
+    SELECT OrderID, CustomerID, EmployeeID, OrderDate, RequiredDate,
+           ShippedDate, ShipVia, FreightCharge,
            JULIANDAY(ShippedDate) - JULIANDAY(OrderDate) AS WaitingTime
     FROM Orders
     WHERE ShippedDate IS NOT NULL
